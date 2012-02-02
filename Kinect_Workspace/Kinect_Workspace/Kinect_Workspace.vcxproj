@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{200E859F-5B62-4493-A3E0-AEBDC64DBCEF}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>Kinect_Workspace</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>C:\OpenCV2.3\include;C:\OpenCV2.3\modules\calib3d\include;C:\OpenCV2.3\modules\contrib\include;C:\OpenCV2.3\modules\core\include;C:\OpenCV2.3\modules\features2d\include;C:\OpenCV2.3\modules\gpu\include;C:\OpenCV2.3\modules\flann\include;C:\OpenCV2.3\modules\highgui\include;C:\OpenCV2.3\modules\imgproc\include;C:\OpenCV2.3\modules\legacy\include;C:\OpenCV2.3\modules\ml\include;C:\OpenCV2.3\modules\objdetect\include;C:\OpenCV2.3\modules\stitching\include;C:\OpenCV2.3\modules\ts\include;C:\OpenCV2.3\modules\video\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\OpenCV2.3\bin\lib\Debug\;$(LibraryPath)</LibraryPath>
+    <ExecutablePath>$(ExecutablePath)</ExecutablePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;C:\OpenCV2.3\bin\lib\Debug\opencv_core232d.lib;C:\OpenCV2.3\bin\lib\Debug\opencv_flann232d.lib;C:\OpenCV2.3\bin\lib\Debug\opencv_imgproc232d.lib;C:\OpenCV2.3\bin\lib\Debug\opencv_highgui232d.lib;C:\OpenCV2.3\bin\lib\Debug\opencv_ml232d.lib;C:\OpenCV2.3\bin\lib\Debug\opencv_video232d.lib;C:\OpenCV2.3\bin\lib\Debug\opencv_objdetect232d.lib;C:\OpenCV2.3\bin\lib\Debug\opencv_features2d232d.lib;C:\OpenCV2.3\bin\lib\Debug\opencv_calib3d232d.lib;C:\OpenCV2.3\bin\lib\Debug\opencv_legacy232d.lib;C:\OpenCV2.3\bin\lib\Debug\opencv_contrib232d.lib;C:\OpenCV2.3\bin\lib\Debug\opencv_stitching232d.lib;C:\OpenCV2.3\bin\lib\Debug\opencv_gpu232d.lib;C:\OpenCV2.3\bin\3rdparty\lib\Debug\zlibd.lib;C:\OpenCV2.3\bin\3rdparty\lib\Debug\libjpegd.lib;C:\OpenCV2.3\bin\3rdparty\lib\Debug\libpngd.lib;C:\OpenCV2.3\bin\3rdparty\lib\Debug\libtiffd.lib;C:\OpenCV2.3\bin\3rdparty\lib\Debug\libjasperd.lib;comctl32.lib;vfw32.lib;C:\Program Files (x86)\OpenNI\Lib\openNI.lib</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="kinect_workspace.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
